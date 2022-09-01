@@ -1,18 +1,19 @@
-import React from "react";
 import {
-  AppBar,
-  Box,
+  AppBar, Badge, Box,
   Hidden,
-  IconButton,
-  Toolbar,
-  Typography,
+  IconButton, Toolbar
 } from "@material-ui/core";
-import { useStyles } from "./HeaderStyle";
+import ForumIcon from "@material-ui/icons/Forum";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
+import React from "react";
+import { useStyles } from "./HeaderStyle";
 
-import Notification from "./ActionTab/Notification";
-import Profile from "./ActionTab/Profile";
+
+import Admin from "./ActionTab/AdminSelect";
+import Language from "./ActionTab/Language";
 import Messages from "./ActionTab/Messages";
+import Notification from "./ActionTab/Notification";
+import UserSwitch from "./ActionTab/UserSwitch";
 
 export default function NavbarComponent({ handleDrawerToggle }) {
   const classes = useStyles();
@@ -20,16 +21,38 @@ export default function NavbarComponent({ handleDrawerToggle }) {
   return (
     <AppBar>
       <Toolbar className={classes.toolbar}>
-        <Box style={{ display: "flex" }}>
-          <Typography variant='h6' className={classes.logo}>
-            {"<AdminPannel />"}
-          </Typography>
+        <Box >
+
+
+
+        </Box>
+        <Box >
         </Box>
         <Hidden smDown>
+          <Box style={{ display: "flex" }}>
+
+            <Admin />
+            <Language />
+            <UserSwitch />
+
+
+          </Box>
+        </Hidden>
+
+        <Hidden smDown>
           <Box>
+
+            <Badge color='secondary'>
+              <ForumIcon />
+            </Badge>
             <Notification />
             <Messages />
-            <Profile />
+
+
+
+
+
+
           </Box>
         </Hidden>
         <Hidden mdUp>
@@ -37,6 +60,7 @@ export default function NavbarComponent({ handleDrawerToggle }) {
             <MenuRoundedIcon />
           </IconButton>
         </Hidden>
+
       </Toolbar>
     </AppBar>
   );

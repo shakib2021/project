@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import {
   Avatar,
   Badge,
@@ -8,9 +7,10 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
-  Menu,
+  Menu
 } from "@material-ui/core";
 import ForumIcon from "@material-ui/icons/Forum";
+import React, { Fragment } from "react";
 import { useStyles } from "../HeaderStyle";
 
 export default function Messages() {
@@ -26,7 +26,7 @@ export default function Messages() {
   };
 
   const dropDownData = [
-    { label: "GreatCoders", description: "commodi dicta ..." },
+    { label: "GreatCoders", description: "shakib dicta ..." },
     { label: "Bholenath", description: "ipsum dolor sit ..." },
     { label: "Mahakaal", description: "llum porro saepe ..." },
   ];
@@ -42,6 +42,7 @@ export default function Messages() {
           <ForumIcon />
         </Badge>
       </IconButton>
+    
       <Menu
         id='Messages'
         anchorEl={anchorEl}

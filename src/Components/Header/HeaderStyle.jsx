@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { blue, blueGrey } from "@material-ui/core/colors";
 
 export const useStyles = makeStyles((theme) => {
   console.log(theme.breakpoints);
@@ -10,7 +9,7 @@ export const useStyles = makeStyles((theme) => {
       height: "35px",
       borderRadius: "50%",
       color: "White",
-      backgroundColor: blue["A400"],
+      backgroundColor:"#1979BE",
     },
 
     //header
@@ -27,7 +26,7 @@ export const useStyles = makeStyles((theme) => {
     },
     logo: {
       lineHeight: "47px",
-      color: "inherit",
+      color: "white",
     },
 
     // navbar styles
@@ -36,6 +35,7 @@ export const useStyles = makeStyles((theme) => {
       display: "flex",
       flexFlow: "row wrap",
       justifyContent: "space-between",
+      background:"#1979BE"
     },
     brandBox: {
       display: "flex",
@@ -46,11 +46,15 @@ export const useStyles = makeStyles((theme) => {
     },
     listItem: {
       textTransform: "capitalize",
+   
+    
     },
 
     //sidenav
     drawerPaper: {
       width: "250px",
+      background:"#3F3F3F",
+color:"white",
       marginTop: "64px",
       [theme.breakpoints.down("sm")]: {
         marginTop: "0px",
@@ -58,18 +62,26 @@ export const useStyles = makeStyles((theme) => {
     },
 
     navlink: {
-      color: blueGrey[700],
+     "& div ":{
+color:"white"
+     },
+      color: `${"white"} !important`,
+     
       transition: "0.8s",
       "&:hover  div": {
-        color: blue["A400"],
+        color: "white",
+      // background:"#222222",
+ 
+
       },
     },
-    navButton: { width: "100%", textTransform: "capitalize" },
+    navButton: { width: "100%",textTransform: "capitalize" },
     selectedNav: {
-      color: `${blue[800]} !important`,
+      color: `${"white"} !important`,
+      background:"#222222",
       fontWeight: " bolder",
       " & div": {
-        color: `${blue[800]} !important`,
+        color: `${"white"} !important`,
       },
     },
   };
